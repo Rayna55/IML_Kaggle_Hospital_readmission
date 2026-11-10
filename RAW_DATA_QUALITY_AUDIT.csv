@@ -1,0 +1,15 @@
+table,rows,columns,missing_cells,duplicates_within_chunks_lower_bound,file_bytes
+train.csv,76975,2,0,0,923725
+test.csv,32812,1,0,0,328133
+index_encounters.csv,109787,12,150471,0,13803803
+patients.csv,109787,9,47759,0,6026018
+hospitals.csv,40,5,2,0,1246
+prior_utilization.csv,714062,4,21642,1284,20621273
+diagnoses.csv,451976,5,30022,0,9914081
+discharge_planning.csv,97552,5,53185,0,2192908
+medications.csv,447278,7,291731,299,23068461
+procedures.csv,19547,4,0,0,630158
+unit_transfers.csv,211097,4,0,0,11463596
+lab_results.csv,1668783,7,403319,34,96445594
+vitals.csv,2267367,4,0,16,82042187
+icd10_lookup.csv,82,4,0,0,5088
