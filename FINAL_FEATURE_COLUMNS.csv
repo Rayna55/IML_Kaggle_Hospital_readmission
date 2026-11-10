@@ -1,0 +1,856 @@
+feature_number,final_feature,source_table_inferred,transformation_inferred,train_missing_fraction,train_unique_values,needs_manual_review
+1,base_admit_weight_kg,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.8704514452744397,946,True
+2,base_zip3,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.04023384215654433,150,True
+3,base_deprivation_index,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.04735303670022735,999,True
+4,base_bed_size,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.08374147450470933,6,True
+5,base_teaching_flag,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+6,base_age,patients.csv + index_encounters.csv,demographic or encounter-derived characteristic,0.0016498863267294577,81,True
+7,base_stay_days,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,71567,True
+8,base_previous_visits,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,34,True
+9,base_visits_90d,prior_utilization.csv + index_encounters.csv,"time-filtered visit counts, recency or history statistics",0.0,8,True
+10,base_days_since_last_visit,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.005105553751217928,76432,True
+11,base_hospitals_visited,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,12,True
+12,base_diagnosis_count,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,15,True
+13,base_unique_diagnoses,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,15,True
+14,base_followup_scheduled_days,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.48391036050665803,45,True
+15,base_med_reconciliation_done,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.15611562195518025,2,True
+16,base_admit_month,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,12,True
+17,base_discharge_weekday,discharge_planning.csv + index_encounters.csv,discharge planning information or discharge-time feature,0.0,7,True
+18,base_total_ed_visits,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,10,True
+19,base_total_ip_visits,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,9,True
+20,base_total_op_visits,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,25,True
+21,base_ed_30d,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,3,True
+22,base_ip_30d,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,3,True
+23,base_ed_90d,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,4,True
+24,base_ip_90d,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,3,True
+25,base_ed_365d,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,7,True
+26,base_ip_365d,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,6,True
+27,base_visits_30d_v2,prior_utilization.csv + index_encounters.csv,"time-filtered visit counts, recency or history statistics",0.0,6,True
+28,base_visits_90d_v2,prior_utilization.csv + index_encounters.csv,"time-filtered visit counts, recency or history statistics",0.0,8,True
+29,base_visits_365d_v2,prior_utilization.csv + index_encounters.csv,"time-filtered visit counts, recency or history statistics",0.0,21,True
+30,base_diagnosis_chapters,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,11,True
+31,base_primary_diagnosis_count,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+32,base_medication_count,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,18,True
+33,base_medication_classes,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,14,True
+34,base_continued_medications,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,14,True
+35,base_procedure_count,procedures.csv,procedure count or category summary,0.0,4,True
+36,base_unique_procedures,procedures.csv,procedure count or category summary,0.0,4,True
+37,base_unit_records,unit_transfers.csv,"unit transfer, ICU exposure or duration summary",0.0,6,True
+38,base_unique_units,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,4,True
+39,base_icu_exposure,unit_transfers.csv,"unit transfer, ICU exposure or duration summary",0.0,2,True
+40,base_total_icu_hours,unit_transfers.csv,"unit transfer, ICU exposure or duration summary",0.0,3817,True
+41,base_total_unit_hours,unit_transfers.csv,"unit transfer, ICU exposure or duration summary",0.0,71567,True
+42,base_lab_total_count,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",1.2991230919129587e-05,72,True
+43,base_lab_abnormal_count,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",1.2991230919129587e-05,59,True
+44,base_lab_high_count,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",1.2991230919129587e-05,50,True
+45,base_lab_low_count,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",1.2991230919129587e-05,20,True
+46,base_lab_abnormal_fraction,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",1.2991230919129587e-05,779,True
+47,base_lab_bun_count,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.24743098408574213,13,True
+48,base_lab_creatinine_count,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.14451445274439753,15,True
+49,base_lab_glucose_count,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.23860993829165314,18,True
+50,base_lab_hemoglobin_count,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.1571419291977915,11,True
+51,base_lab_potassium_count,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.19886976291003572,14,True
+52,base_lab_sodium_count,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.14758038324131212,13,True
+53,base_lab_wbc_count,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.18077297823968821,12,True
+54,base_lab_bun_mean,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.24743098408574213,1283,True
+55,base_lab_creatinine_mean,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.14451445274439753,5892,True
+56,base_lab_glucose_mean,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.23860993829165314,6093,True
+57,base_lab_hemoglobin_mean,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.1571419291977915,1507,True
+58,base_lab_potassium_mean,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.19886976291003572,706,True
+59,base_lab_sodium_mean,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.14758038324131212,487,True
+60,base_lab_wbc_mean,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.18077297823968821,2883,True
+61,base_lab_bun_min,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.24743098408574213,133,True
+62,base_lab_creatinine_min,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.14451445274439753,1084,True
+63,base_lab_glucose_min,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.23860993829165314,553,True
+64,base_lab_hemoglobin_min,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.1571419291977915,157,True
+65,base_lab_potassium_min,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.19886976291003572,58,True
+66,base_lab_sodium_min,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.14758038324131212,34,True
+67,base_lab_wbc_min,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.18077297823968821,406,True
+68,base_lab_bun_max,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.24743098408574213,166,True
+69,base_lab_creatinine_max,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.14451445274439753,1331,True
+70,base_lab_glucose_max,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.23860993829165314,718,True
+71,base_lab_hemoglobin_max,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.1571419291977915,182,True
+72,base_lab_potassium_max,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.19886976291003572,69,True
+73,base_lab_sodium_max,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.14758038324131212,42,True
+74,base_lab_wbc_max,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.18077297823968821,536,True
+75,base_lab_bun_std,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.5218837284832738,1405,True
+76,base_lab_creatinine_std,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.45284832737901914,8361,True
+77,base_lab_glucose_std,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.398895745371874,13035,True
+78,base_lab_hemoglobin_std,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.5061253653783696,975,True
+79,base_lab_potassium_std,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.48766482624228646,434,True
+80,base_lab_sodium_std,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.4574861968171484,372,True
+81,base_lab_wbc_std,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.5162195518025333,5618,True
+82,base_lab_bun_first,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.24743098408574213,160,True
+83,base_lab_creatinine_first,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.14451445274439753,1298,True
+84,base_lab_glucose_first,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.23860993829165314,678,True
+85,base_lab_hemoglobin_first,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.1571419291977915,170,True
+86,base_lab_potassium_first,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.19886976291003572,67,True
+87,base_lab_sodium_first,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.14758038324131212,37,True
+88,base_lab_wbc_first,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.18077297823968821,511,True
+89,base_lab_bun_last,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.24743098408574213,141,True
+90,base_lab_creatinine_last,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.14451445274439753,1104,True
+91,base_lab_glucose_last,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.23860993829165314,576,True
+92,base_lab_hemoglobin_last,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.1571419291977915,169,True
+93,base_lab_potassium_last,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.19886976291003572,62,True
+94,base_lab_sodium_last,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.14758038324131212,39,True
+95,base_lab_wbc_last,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.18077297823968821,420,True
+96,base_lab_creatinine_change,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.14451445274439753,562,True
+97,base_lab_bun_change,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.24743098408574213,117,True
+98,base_lab_hemoglobin_change,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.1571419291977915,76,True
+99,base_lab_wbc_change,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.18077297823968821,287,True
+100,base_lab_potassium_change,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.19886976291003572,54,True
+101,base_lab_sodium_change,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.14758038324131212,47,True
+102,base_lab_glucose_change,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.23860993829165314,395,True
+103,base_vital_dbp_count,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0013640792465086067,11,True
+104,base_vital_hr_count,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0015199740175381618,12,True
+105,base_vital_rr_count,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0012081844754790517,11,True
+106,base_vital_sbp_count,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.001390061708346866,11,True
+107,base_vital_spo2_count,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0014290354011042546,12,True
+108,base_vital_temp_count,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0013770704774277362,11,True
+109,base_vital_dbp_mean,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0013640792465086067,1538,True
+110,base_vital_hr_mean,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0015589477102955504,1651,True
+111,base_vital_rr_mean,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0012081844754790517,452,True
+112,base_vital_sbp_mean,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.001390061708346866,2015,True
+113,base_vital_spo2_mean,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0014550178629425137,334,True
+114,base_vital_temp_mean,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0013770704774277362,920,True
+115,base_vital_dbp_min,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0013640792465086067,92,True
+116,base_vital_hr_min,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0015589477102955504,99,True
+117,base_vital_rr_min,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0012081844754790517,23,True
+118,base_vital_sbp_min,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.001390061708346866,129,True
+119,base_vital_spo2_min,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0014550178629425137,15,True
+120,base_vital_temp_min,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0013770704774277362,67,True
+121,base_vital_dbp_max,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0013640792465086067,93,True
+122,base_vital_hr_max,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0015589477102955504,103,True
+123,base_vital_rr_max,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0012081844754790517,24,True
+124,base_vital_sbp_max,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.001390061708346866,132,True
+125,base_vital_spo2_max,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0014550178629425137,14,True
+126,base_vital_temp_max,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0013770704774277362,73,True
+127,base_vital_dbp_std,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.038856771679116595,2717,True
+128,base_vital_hr_std,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.03844105228970445,2925,True
+129,base_vital_rr_std,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.03884378044819747,424,True
+130,base_vital_sbp_std,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.037531666125365376,4318,True
+131,base_vital_spo2_std,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.038480025982461835,231,True
+132,base_vital_temp_std,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.03757063981812277,1872,True
+133,base_vital_dbp_first,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0013640792465086067,93,True
+134,base_vital_hr_first,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0015589477102955504,105,True
+135,base_vital_rr_first,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0012081844754790517,25,True
+136,base_vital_sbp_first,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.001390061708346866,136,True
+137,base_vital_spo2_first,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0014550178629425137,15,True
+138,base_vital_temp_first,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0013770704774277362,76,True
+139,base_vital_dbp_last,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0013640792465086067,95,True
+140,base_vital_hr_last,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0015589477102955504,101,True
+141,base_vital_rr_last,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0012081844754790517,23,True
+142,base_vital_sbp_last,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.001390061708346866,133,True
+143,base_vital_spo2_last,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0014550178629425137,15,True
+144,base_vital_temp_last,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0013770704774277362,68,True
+145,base_vital_hr_change,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0015589477102955504,59,True
+146,base_vital_sbp_change,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.001390061708346866,80,True
+147,base_vital_dbp_change,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0013640792465086067,59,True
+148,base_vital_rr_change,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0012081844754790517,17,True
+149,base_vital_spo2_change,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0014550178629425137,11,True
+150,base_vital_temp_change,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0013770704774277362,65,True
+151,base_pulse_pressure_last,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0027541409548554724,101,True
+152,base_visits_30d,prior_utilization.csv + index_encounters.csv,"time-filtered visit counts, recency or history statistics",0.0,6,True
+153,base_visits_365d,prior_utilization.csv + index_encounters.csv,"time-filtered visit counts, recency or history statistics",0.0,21,True
+154,base_visits_ed,prior_utilization.csv + index_encounters.csv,"time-filtered visit counts, recency or history statistics",0.0,10,True
+155,base_visits_ip,prior_utilization.csv + index_encounters.csv,"time-filtered visit counts, recency or history statistics",0.0,9,True
+156,base_visits_op,prior_utilization.csv + index_encounters.csv,"time-filtered visit counts, recency or history statistics",0.0,25,True
+157,base_different_hospitals_visited,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,12,True
+158,base_admit_dt_hour_v8,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,24,True
+159,base_admit_dt_dow_v8,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,7,True
+160,base_admit_dt_month_v8,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,12,True
+161,base_discharge_dt_hour_v8,discharge_planning.csv + index_encounters.csv,discharge planning information or discharge-time feature,0.0,24,True
+162,base_discharge_dt_dow_v8,discharge_planning.csv + index_encounters.csv,discharge planning information or discharge-time feature,0.0,7,True
+163,base_discharge_dt_month_v8,discharge_planning.csv + index_encounters.csv,discharge planning information or discharge-time feature,0.0,12,True
+164,base_v8_history_min,prior_utilization.csv + index_encounters.csv,"time-filtered visit counts, recency or history statistics",0.005105553751217928,76432,True
+165,base_v8_history_mean,prior_utilization.csv + index_encounters.csv,"time-filtered visit counts, recency or history statistics",0.005105553751217928,76279,True
+166,base_v8_history_std,prior_utilization.csv + index_encounters.csv,"time-filtered visit counts, recency or history statistics",0.028515751867489444,69859,True
+167,base_v8_history_count,prior_utilization.csv + index_encounters.csv,"time-filtered visit counts, recency or history statistics",0.005105553751217928,33,True
+168,base_v8_visits_7d,prior_utilization.csv + index_encounters.csv,"time-filtered visit counts, recency or history statistics",0.9474634621630399,2,True
+169,base_v8_ED_7d,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.9941409548554726,2,True
+170,base_v8_visits_30d,prior_utilization.csv + index_encounters.csv,"time-filtered visit counts, recency or history statistics",0.7757973367976616,5,True
+171,base_v8_ED_30d,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.9730691783046443,2,True
+172,base_v8_IP_30d,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.9867489444624878,2,True
+173,base_v8_visits_90d,prior_utilization.csv + index_encounters.csv,"time-filtered visit counts, recency or history statistics",0.4646443650535888,7,True
+174,base_v8_ED_90d,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.9204546930821695,3,True
+175,base_v8_IP_90d,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.9571029555050341,2,True
+176,base_v8_visits_180d,prior_utilization.csv + index_encounters.csv,"time-filtered visit counts, recency or history statistics",0.22407275089314713,12,True
+177,base_v8_ED_180d,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.8478337122442351,4,True
+178,base_v8_IP_180d,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.9151152971744073,4,True
+179,base_v8_visits_365d,prior_utilization.csv + index_encounters.csv,"time-filtered visit counts, recency or history statistics",0.055537512179278985,20,True
+180,base_v8_ED_365d,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.7196622279961026,6,True
+181,base_v8_IP_365d,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.8358168236440403,5,True
+182,base_v8_visits_730d,prior_utilization.csv + index_encounters.csv,"time-filtered visit counts, recency or history statistics",0.0051185449821370575,33,True
+183,base_v8_ED_730d,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.5340175381617408,9,True
+184,base_v8_IP_730d,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.7076193569340695,8,True
+185,base_v8_dx_0,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+186,base_v8_dx_1,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+187,base_v8_dx_2,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+188,base_v8_dx_3,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+189,base_v8_dx_4,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+190,base_v8_dx_5,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+191,base_v8_dx_6,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+192,base_v8_dx_7,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+193,base_v8_dx_8,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+194,base_v8_dx_9,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+195,base_v8_dx_10,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+196,base_v8_dx_11,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+197,base_v8_dx_12,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+198,base_v8_dx_13,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+199,base_v8_dx_14,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+200,base_v8_dx_15,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+201,base_v8_dx_16,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+202,base_v8_dx_17,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+203,base_v8_dx_18,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+204,base_v8_dx_19,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+205,base_v8_dx_20,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+206,base_v8_dx_21,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+207,base_v8_dx_22,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+208,base_v8_dx_23,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+209,base_v8_dx_24,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+210,base_v8_dx_25,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+211,base_v8_dx_26,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+212,base_v8_dx_27,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+213,base_v8_dx_28,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+214,base_v8_dx_29,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+215,base_v8_dx_30,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+216,base_v8_dx_31,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+217,base_v8_dx_32,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+218,base_v8_dx_33,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+219,base_v8_dx_34,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+220,base_v8_dx_35,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+221,base_v8_dx_36,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+222,base_v8_dx_37,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+223,base_v8_dx_38,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+224,base_v8_dx_39,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+225,base_v8_dx_40,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+226,base_v8_dx_41,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+227,base_v8_dx_42,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+228,base_v8_dx_43,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+229,base_v8_dx_44,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.08454693082169536,3,True
+230,base_v8_group_0,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+231,base_v8_group_1,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+232,base_v8_group_2,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+233,base_v8_group_3,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+234,base_v8_group_4,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+235,base_v8_group_5,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,4,True
+236,base_v8_group_6,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+237,base_v8_group_7,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+238,base_v8_group_8,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+239,base_v8_group_9,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,4,True
+240,base_v8_group_10,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+241,base_v8_group_11,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+242,base_v8_group_12,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+243,base_v8_group_13,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+244,base_v8_group_14,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+245,base_v8_group_15,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+246,base_v8_group_16,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+247,base_v8_group_17,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+248,base_v8_group_18,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+249,base_v8_group_19,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+250,base_v8_group_20,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,4,True
+251,base_v8_group_21,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,4,True
+252,base_v8_group_22,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+253,base_v8_group_23,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+254,base_v8_group_24,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+255,base_v8_group_25,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,4,True
+256,base_v8_group_26,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+257,base_v8_group_27,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+258,base_v8_group_28,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+259,base_v8_group_29,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+260,base_v8_group_30,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+261,base_v8_group_31,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+262,base_v8_group_32,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+263,base_v8_group_33,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+264,base_v8_group_34,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+265,base_v8_group_35,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+266,base_v8_group_36,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+267,base_v8_group_37,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+268,base_v8_group_38,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+269,base_v8_group_39,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+270,base_v8_group_40,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+271,base_v8_group_41,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+272,base_v8_group_42,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+273,base_v8_group_43,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+274,base_v8_group_44,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+275,base_v8_group_45,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+276,base_v8_group_46,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+277,base_v8_group_47,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+278,base_v8_group_48,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+279,base_v8_group_49,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+280,base_v8_group_50,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+281,base_v8_group_51,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+282,base_v8_group_52,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,4,True
+283,base_v8_group_53,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+284,base_v8_group_54,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.002858070802208509,3,True
+285,base_v8_med_0,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,4,True
+286,base_v8_med_1,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,3,True
+287,base_v8_med_2,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,5,True
+288,base_v8_med_3,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,5,True
+289,base_v8_med_4,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,4,True
+290,base_v8_med_5,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,3,True
+291,base_v8_med_6,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,4,True
+292,base_v8_med_7,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,3,True
+293,base_v8_med_8,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,3,True
+294,base_v8_med_9,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,3,True
+295,base_v8_med_10,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,3,True
+296,base_v8_med_11,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,3,True
+297,base_v8_med_12,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,4,True
+298,base_v8_med_13,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,3,True
+299,base_v8_med_14,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,4,True
+300,base_v8_med_15,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,4,True
+301,base_v8_med_16,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,4,True
+302,base_v8_med_17,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,3,True
+303,base_v8_med_18,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,3,True
+304,base_v8_med_19,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,3,True
+305,base_v8_med_20,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,3,True
+306,base_v8_med_21,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,3,True
+307,base_v8_med_discharge_0,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.10133160116921078,4,True
+308,base_v8_med_discharge_1,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.10133160116921078,3,True
+309,base_v8_med_discharge_2,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.10133160116921078,3,True
+310,base_v8_med_discharge_3,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.10133160116921078,4,True
+311,base_v8_med_discharge_4,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.10133160116921078,4,True
+312,base_v8_med_discharge_5,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.10133160116921078,3,True
+313,base_v8_med_discharge_6,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.10133160116921078,4,True
+314,base_v8_med_discharge_7,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.10133160116921078,2,True
+315,base_v8_med_discharge_8,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.10133160116921078,3,True
+316,base_v8_med_discharge_9,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.10133160116921078,3,True
+317,base_v8_med_discharge_10,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.10133160116921078,3,True
+318,base_v8_med_discharge_11,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.10133160116921078,3,True
+319,base_v8_med_discharge_12,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.10133160116921078,3,True
+320,base_v8_med_discharge_13,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.10133160116921078,3,True
+321,base_v8_med_discharge_14,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.10133160116921078,4,True
+322,base_v8_med_discharge_15,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.10133160116921078,3,True
+323,base_v8_med_discharge_16,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.10133160116921078,3,True
+324,base_v8_med_discharge_17,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.10133160116921078,3,True
+325,base_v8_med_discharge_18,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.10133160116921078,3,True
+326,base_v8_med_discharge_19,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.10133160116921078,3,True
+327,base_v8_med_discharge_20,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.10133160116921078,3,True
+328,base_v8_med_discharge_21,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.10133160116921078,3,True
+329,base_v8_vital_DBP_mean,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.04986034426761936,437,True
+330,base_v8_vital_HR_mean,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.04995128288405326,448,True
+331,base_v8_vital_RR_mean,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.05056187073725235,123,True
+332,base_v8_vital_SBP_mean,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0482104579408899,583,True
+333,base_v8_vital_SPO2_mean,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.04853523871386814,89,True
+334,base_v8_vital_TEMP_mean,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.04883403702500812,291,True
+335,base_v8_vital_DBP_std,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.7214939915556999,386,True
+336,base_v8_vital_HR_std,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.7220136407924651,360,True
+337,base_v8_vital_RR_std,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.7206755440077948,81,True
+338,base_v8_vital_SBP_std,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.7204287106203313,543,True
+339,base_v8_vital_SPO2_std,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.7201429035401105,47,True
+340,base_v8_vital_TEMP_std,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.7188827541409548,259,True
+341,base_v8_vital_DBP_min,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.04986034426761936,95,True
+342,base_v8_vital_HR_min,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.04995128288405326,101,True
+343,base_v8_vital_RR_min,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.05056187073725235,23,True
+344,base_v8_vital_SBP_min,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0482104579408899,133,True
+345,base_v8_vital_SPO2_min,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.04853523871386814,15,True
+346,base_v8_vital_TEMP_min,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.04883403702500812,68,True
+347,base_v8_vital_DBP_max,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.04986034426761936,94,True
+348,base_v8_vital_HR_max,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.04995128288405326,100,True
+349,base_v8_vital_RR_max,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.05056187073725235,23,True
+350,base_v8_vital_SBP_max,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0482104579408899,131,True
+351,base_v8_vital_SPO2_max,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.04853523871386814,15,True
+352,base_v8_vital_TEMP_max,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.04883403702500812,67,True
+353,base_v8_vital_DBP_last,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.04986034426761936,95,True
+354,base_v8_vital_HR_last,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.04995128288405326,101,True
+355,base_v8_vital_RR_last,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.05056187073725235,23,True
+356,base_v8_vital_SBP_last,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0482104579408899,133,True
+357,base_v8_vital_SPO2_last,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.04853523871386814,15,True
+358,base_v8_vital_TEMP_last,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.04883403702500812,68,True
+359,base_v8_lab_count,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.019058135758363105,18,True
+360,base_v8_lab_unique,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.019058135758363105,11,True
+361,base_v8_lab_abnormal,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.019058135758363105,12,True
+362,base_v8_lab_abnormal_fraction,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.019058135758363105,68,True
+363,base_v8_missing_count,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,176,True
+364,base_v9_shock_index,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0029490094186424166,5930,True
+365,base_v9_bun_creatinine,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.3520883403702501,9064,True
+366,base_v9_recent_visit_share,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.7757973367976616,42,True
+367,base_v9_recent_ip_share,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.9571029555050341,10,True
+368,base_v9_diagnoses_per_day,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,74994,True
+369,base_v9_abnormal_labs_per_day,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.019058135758363105,36609,True
+370,base_v9_heart_rate_change,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.04995128288405326,59,True
+371,base_v9_systolic_change,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0482104579408899,80,True
+372,base_v9_oxygen_change,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.04853523871386814,11,True
+373,base_v9_bun_change,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.24743098408574213,117,True
+374,base_v9_creatinine_change,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.14451445274439753,562,True
+375,base_hospital_id_h001,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+376,base_hospital_id_h002,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+377,base_hospital_id_h003,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+378,base_hospital_id_h004,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+379,base_hospital_id_h005,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+380,base_hospital_id_h006,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+381,base_hospital_id_h007,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+382,base_hospital_id_h008,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+383,base_hospital_id_h009,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+384,base_hospital_id_h010,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+385,base_hospital_id_h011,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+386,base_hospital_id_h012,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+387,base_hospital_id_h013,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+388,base_hospital_id_h014,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+389,base_hospital_id_h015,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+390,base_hospital_id_h016,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+391,base_hospital_id_h017,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+392,base_hospital_id_h018,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+393,base_hospital_id_h019,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+394,base_hospital_id_h020,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+395,base_hospital_id_h021,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+396,base_hospital_id_h022,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+397,base_hospital_id_h023,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+398,base_hospital_id_h024,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+399,base_hospital_id_h025,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+400,base_hospital_id_h026,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+401,base_hospital_id_h027,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+402,base_hospital_id_h028,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+403,base_hospital_id_h029,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+404,base_hospital_id_h030,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+405,base_hospital_id_h031,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+406,base_hospital_id_h032,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+407,base_hospital_id_h033,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+408,base_hospital_id_h034,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+409,base_hospital_id_h035,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+410,base_hospital_id_h036,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+411,base_hospital_id_h037,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+412,base_hospital_id_h038,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+413,base_hospital_id_h039,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+414,base_hospital_id_h040,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+415,base_admission_type_elective,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+416,base_admission_type_emergency,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+417,base_admission_type_missing,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+418,base_admission_type_not_available,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+419,base_admission_type_trauma,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+420,base_admission_type_urgent,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+421,base_admission_source_clinic_referral,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+422,base_admission_source_emergency_room,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+423,base_admission_source_missing,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+424,base_admission_source_not_available,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+425,base_admission_source_physician_referral,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+426,base_admission_source_transfer_from_hospital,unit_transfers.csv,"unit transfer, ICU exposure or duration summary",0.0,2,True
+427,base_admission_source_transfer_from_snf,unit_transfers.csv,"unit transfer, ICU exposure or duration summary",0.0,2,True
+428,base_service_line_cardiology,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+429,base_service_line_medicine,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+430,base_service_line_neurology,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+431,base_service_line_oncology,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+432,base_service_line_orthopedics,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+433,base_service_line_pulmonology,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+434,base_service_line_surgery,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+435,base_discharge_disposition_home,discharge_planning.csv + index_encounters.csv,discharge planning information or discharge-time feature,0.0,2,True
+436,base_discharge_disposition_home_with_home_health,discharge_planning.csv + index_encounters.csv,discharge planning information or discharge-time feature,0.0,2,True
+437,base_discharge_disposition_hospice,discharge_planning.csv + index_encounters.csv,discharge planning information or discharge-time feature,0.0,2,True
+438,base_discharge_disposition_inpatient_rehab,discharge_planning.csv + index_encounters.csv,discharge planning information or discharge-time feature,0.0,2,True
+439,base_discharge_disposition_left_ama,discharge_planning.csv + index_encounters.csv,discharge planning information or discharge-time feature,0.0,2,True
+440,base_discharge_disposition_missing,discharge_planning.csv + index_encounters.csv,discharge planning information or discharge-time feature,0.0,2,True
+441,base_discharge_disposition_not_mapped,discharge_planning.csv + index_encounters.csv,discharge planning information or discharge-time feature,0.0,2,True
+442,base_discharge_disposition_other_facility,discharge_planning.csv + index_encounters.csv,discharge planning information or discharge-time feature,0.0,2,True
+443,base_discharge_disposition_skilled_nursing_facility,discharge_planning.csv + index_encounters.csv,discharge planning information or discharge-time feature,0.0,2,True
+444,base_attending_specialty_cardiology,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+445,base_attending_specialty_emergency_trauma,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+446,base_attending_specialty_family_generalpractice,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+447,base_attending_specialty_hospitalist,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+448,base_attending_specialty_internalmedicine,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+449,base_attending_specialty_missing,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+450,base_attending_specialty_nephrology,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+451,base_attending_specialty_neurology,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+452,base_attending_specialty_oncology,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+453,base_attending_specialty_orthopedics,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+454,base_attending_specialty_pulmonology,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+455,base_attending_specialty_surgery_colorectal,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+456,base_attending_specialty_surgery_general,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+457,base_sex_f,patients.csv + index_encounters.csv,demographic or encounter-derived characteristic,0.0,2,True
+458,base_sex_m,patients.csv + index_encounters.csv,demographic or encounter-derived characteristic,0.0,2,True
+459,base_sex_u,patients.csv + index_encounters.csv,demographic or encounter-derived characteristic,0.0,2,True
+460,base_race_ethnicity__,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+461,base_race_ethnicity_asian,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+462,base_race_ethnicity_black,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+463,base_race_ethnicity_hispanic,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+464,base_race_ethnicity_missing,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+465,base_race_ethnicity_other,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+466,base_race_ethnicity_unknown,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+467,base_race_ethnicity_white,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+468,base_language_english,patients.csv + index_encounters.csv,demographic or encounter-derived characteristic,0.0,2,True
+469,base_language_missing,patients.csv + index_encounters.csv,demographic or encounter-derived characteristic,0.0,2,True
+470,base_language_other,patients.csv + index_encounters.csv,demographic or encounter-derived characteristic,0.0,2,True
+471,base_language_spanish,patients.csv + index_encounters.csv,demographic or encounter-derived characteristic,0.0,2,True
+472,base_marital_status_divorced,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+473,base_marital_status_married,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+474,base_marital_status_missing,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+475,base_marital_status_single,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+476,base_marital_status_widowed,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+477,base_insurance_type_commercial,patients.csv + index_encounters.csv,demographic or encounter-derived characteristic,0.0,2,True
+478,base_insurance_type_medicaid,patients.csv + index_encounters.csv,demographic or encounter-derived characteristic,0.0,2,True
+479,base_insurance_type_medicare,patients.csv + index_encounters.csv,demographic or encounter-derived characteristic,0.0,2,True
+480,base_insurance_type_missing,patients.csv + index_encounters.csv,demographic or encounter-derived characteristic,0.0,2,True
+481,base_insurance_type_other,patients.csv + index_encounters.csv,demographic or encounter-derived characteristic,0.0,2,True
+482,base_insurance_type_self_pay,patients.csv + index_encounters.csv,demographic or encounter-derived characteristic,0.0,2,True
+483,base_urban_rural_rural,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+484,base_urban_rural_suburban,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+485,base_urban_rural_urban,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+486,base_ownership_for_profit,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+487,base_ownership_government,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+488,base_ownership_nonprofit,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,True
+489,base_home_health_referral_missing,discharge_planning.csv + index_encounters.csv,discharge planning information or discharge-time feature,0.0,2,True
+490,base_home_health_referral_n,discharge_planning.csv + index_encounters.csv,discharge planning information or discharge-time feature,0.0,2,True
+491,base_home_health_referral_y,discharge_planning.csv + index_encounters.csv,discharge planning information or discharge-time feature,0.0,2,True
+492,base_education_done_missing,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+493,base_education_done_no,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+494,base_education_done_yes,index_encounters.csv / patients.csv / derived features,encounter-level attribute or encoded indicator,0.0,2,True
+495,base_primary_icd_code_a41_9,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+496,base_primary_icd_code_a419,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+497,base_primary_icd_code_c18_9,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+498,base_primary_icd_code_c189,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+499,base_primary_icd_code_c25_9,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+500,base_primary_icd_code_c259,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+501,base_primary_icd_code_c34_90,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+502,base_primary_icd_code_c3490,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+503,base_primary_icd_code_c50_919,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+504,base_primary_icd_code_c50919,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+505,base_primary_icd_code_e11_10,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+506,base_primary_icd_code_e11_65,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+507,base_primary_icd_code_e11_69,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+508,base_primary_icd_code_e1110,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+509,base_primary_icd_code_e1165,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+510,base_primary_icd_code_e1169,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+511,base_primary_icd_code_e86_0,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+512,base_primary_icd_code_e860,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+513,base_primary_icd_code_e87_1,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+514,base_primary_icd_code_e871,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+515,base_primary_icd_code_g40_909,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+516,base_primary_icd_code_g40909,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+517,base_primary_icd_code_g45_9,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+518,base_primary_icd_code_g459,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+519,base_primary_icd_code_g93_40,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+520,base_primary_icd_code_g9340,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+521,base_primary_icd_code_i11_0,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+522,base_primary_icd_code_i110,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+523,base_primary_icd_code_i21_3,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+524,base_primary_icd_code_i21_4,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+525,base_primary_icd_code_i21_9,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+526,base_primary_icd_code_i213,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+527,base_primary_icd_code_i214,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+528,base_primary_icd_code_i219,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+529,base_primary_icd_code_i47_1,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+530,base_primary_icd_code_i471,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+531,base_primary_icd_code_i48_0,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+532,base_primary_icd_code_i48_91,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+533,base_primary_icd_code_i480,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+534,base_primary_icd_code_i4891,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+535,base_primary_icd_code_i50_23,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+536,base_primary_icd_code_i50_33,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+537,base_primary_icd_code_i50_9,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+538,base_primary_icd_code_i5023,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+539,base_primary_icd_code_i5033,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+540,base_primary_icd_code_i509,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+541,base_primary_icd_code_i63_9,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+542,base_primary_icd_code_i639,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+543,base_primary_icd_code_j13,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+544,base_primary_icd_code_j15_9,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+545,base_primary_icd_code_j159,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+546,base_primary_icd_code_j18_9,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+547,base_primary_icd_code_j189,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+548,base_primary_icd_code_j44_0,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+549,base_primary_icd_code_j44_1,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+550,base_primary_icd_code_j440,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+551,base_primary_icd_code_j441,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+552,base_primary_icd_code_k35_80,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+553,base_primary_icd_code_k3580,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+554,base_primary_icd_code_k56_609,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+555,base_primary_icd_code_k56609,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+556,base_primary_icd_code_k57_32,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+557,base_primary_icd_code_k5732,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+558,base_primary_icd_code_k80_00,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+559,base_primary_icd_code_k8000,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+560,base_primary_icd_code_k85_90,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+561,base_primary_icd_code_k8590,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+562,base_primary_icd_code_k92_2,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+563,base_primary_icd_code_k922,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+564,base_primary_icd_code_l03_115,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+565,base_primary_icd_code_l03115,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+566,base_primary_icd_code_m16_11,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+567,base_primary_icd_code_m1611,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+568,base_primary_icd_code_m17_11,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+569,base_primary_icd_code_m1711,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+570,base_primary_icd_code_n17_9,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+571,base_primary_icd_code_n179,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+572,base_primary_icd_code_n39_0,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+573,base_primary_icd_code_n390,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+574,base_primary_icd_code_r06_02,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+575,base_primary_icd_code_r0602,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+576,base_primary_icd_code_r07_9,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+577,base_primary_icd_code_r079,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+578,base_primary_icd_code_r10_9,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+579,base_primary_icd_code_r109,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+580,base_primary_icd_code_r42,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+581,base_primary_icd_code_r55,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+582,base_primary_icd_code_s72_001a,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+583,base_primary_icd_code_s72001a,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+584,base_primary_icd_chapter_circulatory,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+585,base_primary_icd_chapter_digestive,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+586,base_primary_icd_chapter_endocrine_metabolic,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+587,base_primary_icd_chapter_genitourinary,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+588,base_primary_icd_chapter_infectious_diseases,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+589,base_primary_icd_chapter_injury,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+590,base_primary_icd_chapter_missing,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+591,base_primary_icd_chapter_musculoskeletal,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+592,base_primary_icd_chapter_neoplasms,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+593,base_primary_icd_chapter_nervous_system,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+594,base_primary_icd_chapter_respiratory,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+595,base_primary_icd_chapter_skin,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+596,base_primary_icd_chapter_symptoms_signs,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,2,True
+597,extra_v10_patient_zip3,patients.csv + index_encounters.csv,demographic or encounter-derived characteristic,0.04023384215654433,150,False
+598,extra_v10_patient_deprivation_index,patients.csv + index_encounters.csv,demographic or encounter-derived characteristic,0.04735303670022735,999,False
+599,extra_v10_hospital_bed_size,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.08374147450470933,6,False
+600,extra_v10_hospital_teaching_flag,hospitals.csv + index_encounters.csv,hospital/encounter characteristic or one-hot indicator,0.0,2,False
+601,extra_v10_dx_icd_chapter_unique,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,10,False
+602,extra_v10_dx_icd_chapter_A,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,3,False
+603,extra_v10_dx_icd_chapter_C,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,4,False
+604,extra_v10_dx_icd_chapter_D,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,3,False
+605,extra_v10_dx_icd_chapter_E,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,7,False
+606,extra_v10_dx_icd_chapter_F,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,4,False
+607,extra_v10_dx_icd_chapter_G,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,4,False
+608,extra_v10_dx_icd_chapter_I,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,7,False
+609,extra_v10_dx_icd_chapter_J,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,5,False
+610,extra_v10_dx_icd_chapter_K,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,4,False
+611,extra_v10_dx_icd_chapter_L,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,4,False
+612,extra_v10_dx_icd_chapter_M,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,4,False
+613,extra_v10_dx_icd_chapter_N,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,4,False
+614,extra_v10_dx_icd_chapter_R,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,4,False
+615,extra_v10_dx_icd_chapter_S,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,3,False
+616,extra_v10_dx_icd_chapter_W,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,3,False
+617,extra_v10_dx_icd_chapter_Z,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,6,False
+618,extra_v10_proc_count,procedures.csv,procedure count or category summary,0.8276843130886652,3,False
+619,extra_v10_proc_code_unique,procedures.csv,procedure count or category summary,0.8276843130886652,3,False
+620,extra_v10_proc_code_19303,procedures.csv,procedure count or category summary,0.8276843130886652,2,False
+621,extra_v10_proc_code_27130,procedures.csv,procedure count or category summary,0.8276843130886652,2,False
+622,extra_v10_proc_code_27236,procedures.csv,procedure count or category summary,0.8276843130886652,2,False
+623,extra_v10_proc_code_27447,procedures.csv,procedure count or category summary,0.8276843130886652,2,False
+624,extra_v10_proc_code_32480,procedures.csv,procedure count or category summary,0.8276843130886652,2,False
+625,extra_v10_proc_code_36556,procedures.csv,procedure count or category summary,0.8276843130886652,2,False
+626,extra_v10_proc_code_43239,procedures.csv,procedure count or category summary,0.8276843130886652,2,False
+627,extra_v10_proc_code_44120,procedures.csv,procedure count or category summary,0.8276843130886652,2,False
+628,extra_v10_proc_code_44140,procedures.csv,procedure count or category summary,0.8276843130886652,2,False
+629,extra_v10_proc_code_44970,procedures.csv,procedure count or category summary,0.8276843130886652,2,False
+630,extra_v10_proc_code_45378,procedures.csv,procedure count or category summary,0.8276843130886652,2,False
+631,extra_v10_proc_code_47562,procedures.csv,procedure count or category summary,0.8276843130886652,2,False
+632,extra_v10_proc_code_92928,procedures.csv,procedure count or category summary,0.8276843130886652,2,False
+633,extra_v10_proc_code_92960,procedures.csv,procedure count or category summary,0.8276843130886652,2,False
+634,extra_v10_proc_code_93458,procedures.csv,procedure count or category summary,0.8276843130886652,2,False
+635,extra_v10_transfer_count,unit_transfers.csv,"unit transfer, ICU exposure or duration summary",0.0,6,False
+636,extra_v10_transfer_unit_unique,unit_transfers.csv,"unit transfer, ICU exposure or duration summary",0.0,4,False
+637,extra_v10_transfer_unit_ED,unit_transfers.csv,"unit transfer, ICU exposure or duration summary",0.0,2,False
+638,extra_v10_transfer_unit_ICU,unit_transfers.csv,"unit transfer, ICU exposure or duration summary",0.0,3,False
+639,extra_v10_transfer_unit_STEPDOWN,unit_transfers.csv,"unit transfer, ICU exposure or duration summary",0.0,2,False
+640,extra_v10_transfer_unit_WARD,unit_transfers.csv,"unit transfer, ICU exposure or duration summary",0.0,2,False
+641,extra_v10_icu_transfer_count,unit_transfers.csv,"unit transfer, ICU exposure or duration summary",0.0,3,False
+642,extra_v10_plan_med_reconciliation_done_unique,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.11181552452094835,2,False
+643,extra_v10_plan_education_done_unique,discharge_planning.csv + index_encounters.csv,discharge planning information or discharge-time feature,0.11181552452094835,2,False
+644,extra_v10_plan_followup_scheduled_days_mean,discharge_planning.csv + index_encounters.csv,discharge planning information or discharge-time feature,0.48391036050665803,45,False
+645,extra_v10_plan_followup_scheduled_days_min,discharge_planning.csv + index_encounters.csv,discharge planning information or discharge-time feature,0.48391036050665803,45,False
+646,extra_v10_plan_followup_scheduled_days_max,discharge_planning.csv + index_encounters.csv,discharge planning information or discharge-time feature,0.48391036050665803,45,False
+647,extra_v10_plan_med_reconciliation_done_mean,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.15611562195518025,2,False
+648,extra_v10_plan_med_reconciliation_done_min,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.15611562195518025,2,False
+649,extra_v10_plan_med_reconciliation_done_max,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.15611562195518025,2,False
+650,extra_v10_plan_home_health_referral_N,discharge_planning.csv + index_encounters.csv,discharge planning information or discharge-time feature,0.11181552452094835,2,False
+651,extra_v10_plan_home_health_referral_Y,discharge_planning.csv + index_encounters.csv,discharge planning information or discharge-time feature,0.11181552452094835,2,False
+652,extra_v10_plan_med_reconciliation_done_0_0,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.11181552452094835,2,False
+653,extra_v10_plan_med_reconciliation_done_1_0,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.11181552452094835,2,False
+654,extra_v10_plan_med_reconciliation_done_UNKNOWN,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.11181552452094835,2,False
+655,extra_v10_plan_education_done_NO,discharge_planning.csv + index_encounters.csv,discharge planning information or discharge-time feature,0.11181552452094835,2,False
+656,extra_v10_plan_education_done_UNKNOWN,discharge_planning.csv + index_encounters.csv,discharge planning information or discharge-time feature,0.11181552452094835,2,False
+657,extra_v10_plan_education_done_YES,discharge_planning.csv + index_encounters.csv,discharge planning information or discharge-time feature,0.11181552452094835,2,False
+658,extra_v10_history_total,prior_utilization.csv + index_encounters.csv,"time-filtered visit counts, recency or history statistics",0.005105553751217928,33,False
+659,extra_v10_history_last_days,prior_utilization.csv + index_encounters.csv,"time-filtered visit counts, recency or history statistics",0.005105553751217928,76432,False
+660,extra_v10_history_first_days,prior_utilization.csv + index_encounters.csv,"time-filtered visit counts, recency or history statistics",0.005105553751217928,75827,False
+661,extra_v10_history_7d,prior_utilization.csv + index_encounters.csv,"time-filtered visit counts, recency or history statistics",0.005105553751217928,3,False
+662,extra_v10_history_30d,prior_utilization.csv + index_encounters.csv,"time-filtered visit counts, recency or history statistics",0.005105553751217928,6,False
+663,extra_v10_history_90d,prior_utilization.csv + index_encounters.csv,"time-filtered visit counts, recency or history statistics",0.005105553751217928,8,False
+664,extra_v10_history_180d,prior_utilization.csv + index_encounters.csv,"time-filtered visit counts, recency or history statistics",0.005105553751217928,13,False
+665,extra_v10_history_365d,prior_utilization.csv + index_encounters.csv,"time-filtered visit counts, recency or history statistics",0.005105553751217928,21,False
+666,extra_v10_history_730d,prior_utilization.csv + index_encounters.csv,"time-filtered visit counts, recency or history statistics",0.005105553751217928,34,False
+667,extra_v10_prior_type_ED,prior_utilization.csv + index_encounters.csv,"time-filtered visit counts, recency or history statistics",0.005105553751217928,10,False
+668,extra_v10_prior_type_IP,prior_utilization.csv + index_encounters.csv,"time-filtered visit counts, recency or history statistics",0.005105553751217928,9,False
+669,extra_v10_prior_type_OP,prior_utilization.csv + index_encounters.csv,"time-filtered visit counts, recency or history statistics",0.005105553751217928,25,False
+670,extra_v10_lab_abnormal,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",1.2991230919129587e-05,59,False
+671,extra_v10_lab_high,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",1.2991230919129587e-05,50,False
+672,extra_v10_lab_low,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",1.2991230919129587e-05,20,False
+673,extra_v10_lab_count,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",1.2991230919129587e-05,72,False
+674,extra_v10_lab_abnormal_rate,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",1.2991230919129587e-05,779,False
+675,extra_v10_lab_unique,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",1.2991230919129587e-05,13,False
+676,extra_v10_lab_type_ALBUMIN,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",1.2991230919129587e-05,8,False
+677,extra_v10_lab_type_BNP,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",1.2991230919129587e-05,8,False
+678,extra_v10_lab_type_BUN,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",1.2991230919129587e-05,14,False
+679,extra_v10_lab_type_CREATININE,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",1.2991230919129587e-05,16,False
+680,extra_v10_lab_type_GLUCOSE,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",1.2991230919129587e-05,19,False
+681,extra_v10_lab_type_HBA1C,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",1.2991230919129587e-05,3,False
+682,extra_v10_lab_type_HEMOGLOBIN,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",1.2991230919129587e-05,12,False
+683,extra_v10_lab_type_INR,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",1.2991230919129587e-05,13,False
+684,extra_v10_lab_type_LACTATE,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",1.2991230919129587e-05,17,False
+685,extra_v10_lab_type_POTASSIUM,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",1.2991230919129587e-05,15,False
+686,extra_v10_lab_type_SODIUM,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",1.2991230919129587e-05,14,False
+687,extra_v10_lab_type_TROPONIN_I,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",1.2991230919129587e-05,12,False
+688,extra_v10_lab_type_WBC,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",1.2991230919129587e-05,14,False
+689,extra_v10_lab_ALBUMIN_mean,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.6255797336797662,413,False
+690,extra_v10_lab_BNP_mean,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.8772848327379019,3949,False
+691,extra_v10_lab_BUN_mean,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.23848002598246185,1322,False
+692,extra_v10_lab_CREATININE_mean,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.13555050341019811,6072,False
+693,extra_v10_lab_GLUCOSE_mean,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.233686261773303,6289,False
+694,extra_v10_lab_HBA1C_mean,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.8395712893796687,65,False
+695,extra_v10_lab_HEMOGLOBIN_mean,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.1466580058460539,2437,False
+696,extra_v10_lab_INR_mean,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.9378889249756415,905,False
+697,extra_v10_lab_LACTATE_mean,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.9032672945761611,990,False
+698,extra_v10_lab_POTASSIUM_mean,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.19008769080870414,731,False
+699,extra_v10_lab_SODIUM_mean,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.13787593374472232,504,False
+700,extra_v10_lab_TROPONIN_I_mean,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.8560831438778824,2107,False
+701,extra_v10_lab_WBC_mean,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.17109451120493666,2948,False
+702,extra_v10_lab_ALBUMIN_min,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.6255797336797662,89,False
+703,extra_v10_lab_BNP_min,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.8772848327379019,2688,False
+704,extra_v10_lab_BUN_min,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.23848002598246185,133,False
+705,extra_v10_lab_CREATININE_min,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.13555050341019811,1084,False
+706,extra_v10_lab_GLUCOSE_min,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.233686261773303,549,False
+707,extra_v10_lab_HBA1C_min,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.8395712893796687,65,False
+708,extra_v10_lab_HEMOGLOBIN_min,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.1466580058460539,277,False
+709,extra_v10_lab_INR_min,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.9378889249756415,194,False
+710,extra_v10_lab_LACTATE_min,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.9032672945761611,85,False
+711,extra_v10_lab_POTASSIUM_min,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.19008769080870414,58,False
+712,extra_v10_lab_SODIUM_min,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.13787593374472232,36,False
+713,extra_v10_lab_TROPONIN_I_min,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.8560831438778824,880,False
+714,extra_v10_lab_WBC_min,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.17109451120493666,406,False
+715,extra_v10_lab_ALBUMIN_max,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.6255797336797662,93,False
+716,extra_v10_lab_BNP_max,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.8772848327379019,2865,False
+717,extra_v10_lab_BUN_max,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.23848002598246185,167,False
+718,extra_v10_lab_CREATININE_max,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.13555050341019811,1336,False
+719,extra_v10_lab_GLUCOSE_max,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.233686261773303,715,False
+720,extra_v10_lab_HBA1C_max,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.8395712893796687,65,False
+721,extra_v10_lab_HEMOGLOBIN_max,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.1466580058460539,285,False
+722,extra_v10_lab_INR_max,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.9378889249756415,219,False
+723,extra_v10_lab_LACTATE_max,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.9032672945761611,133,False
+724,extra_v10_lab_POTASSIUM_max,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.19008769080870414,69,False
+725,extra_v10_lab_SODIUM_max,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.13787593374472232,44,False
+726,extra_v10_lab_TROPONIN_I_max,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.8560831438778824,1096,False
+727,extra_v10_lab_WBC_max,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.17109451120493666,540,False
+728,extra_v10_lab_ALBUMIN_first,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.6255797336797662,91,False
+729,extra_v10_lab_BNP_first,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.8772848327379019,2861,False
+730,extra_v10_lab_BUN_first,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.23848002598246185,161,False
+731,extra_v10_lab_CREATININE_first,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.13555050341019811,1304,False
+732,extra_v10_lab_GLUCOSE_first,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.233686261773303,680,False
+733,extra_v10_lab_HBA1C_first,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.8395712893796687,65,False
+734,extra_v10_lab_HEMOGLOBIN_first,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.1466580058460539,283,False
+735,extra_v10_lab_INR_first,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.9378889249756415,222,False
+736,extra_v10_lab_LACTATE_first,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.9032672945761611,128,False
+737,extra_v10_lab_POTASSIUM_first,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.19008769080870414,67,False
+738,extra_v10_lab_SODIUM_first,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.13787593374472232,39,False
+739,extra_v10_lab_TROPONIN_I_first,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.8560831438778824,1093,False
+740,extra_v10_lab_WBC_first,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.17109451120493666,515,False
+741,extra_v10_lab_ALBUMIN_last,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.6255797336797662,91,False
+742,extra_v10_lab_BNP_last,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.8772848327379019,2690,False
+743,extra_v10_lab_BUN_last,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.23848002598246185,142,False
+744,extra_v10_lab_CREATININE_last,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.13555050341019811,1104,False
+745,extra_v10_lab_GLUCOSE_last,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.233686261773303,572,False
+746,extra_v10_lab_HBA1C_last,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.8395712893796687,65,False
+747,extra_v10_lab_HEMOGLOBIN_last,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.1466580058460539,276,False
+748,extra_v10_lab_INR_last,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.9378889249756415,194,False
+749,extra_v10_lab_LACTATE_last,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.9032672945761611,87,False
+750,extra_v10_lab_POTASSIUM_last,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.19008769080870414,62,False
+751,extra_v10_lab_SODIUM_last,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.13787593374472232,40,False
+752,extra_v10_lab_TROPONIN_I_last,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.8560831438778824,888,False
+753,extra_v10_lab_WBC_last,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.17109451120493666,422,False
+754,extra_v10_lab_ALBUMIN_delta,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.6255797336797662,44,False
+755,extra_v10_lab_BNP_delta,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.8772848327379019,1160,False
+756,extra_v10_lab_BUN_delta,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.23848002598246185,118,False
+757,extra_v10_lab_CREATININE_delta,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.13555050341019811,561,False
+758,extra_v10_lab_GLUCOSE_delta,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.233686261773303,391,False
+759,extra_v10_lab_HEMOGLOBIN_delta,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.1466580058460539,108,False
+760,extra_v10_lab_INR_delta,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.9378889249756415,89,False
+761,extra_v10_lab_LACTATE_delta,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.9032672945761611,85,False
+762,extra_v10_lab_POTASSIUM_delta,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.19008769080870414,56,False
+763,extra_v10_lab_SODIUM_delta,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.13787593374472232,48,False
+764,extra_v10_lab_TROPONIN_I_delta,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.8560831438778824,641,False
+765,extra_v10_lab_WBC_delta,lab_results.csv + index_encounters.csv,"unit-checked lab counts, abnormalities, summary or trends",0.17109451120493666,288,False
+766,extra_v10_vital_DBP_count,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0013640792465086067,11,False
+767,extra_v10_vital_HR_count,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0015199740175381618,12,False
+768,extra_v10_vital_RR_count,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0012081844754790517,11,False
+769,extra_v10_vital_SBP_count,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.001390061708346866,11,False
+770,extra_v10_vital_SPO2_count,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0014290354011042546,12,False
+771,extra_v10_vital_TEMP_count,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0013770704774277362,11,False
+772,extra_v10_vital_DBP_mean,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0013640792465086067,1538,False
+773,extra_v10_vital_HR_mean,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0015589477102955504,1651,False
+774,extra_v10_vital_RR_mean,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0012081844754790517,452,False
+775,extra_v10_vital_SBP_mean,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.001390061708346866,2015,False
+776,extra_v10_vital_SPO2_mean,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0014550178629425137,334,False
+777,extra_v10_vital_TEMP_mean,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0013770704774277362,920,False
+778,extra_v10_vital_DBP_std,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.038856771679116595,2717,False
+779,extra_v10_vital_HR_std,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.03844105228970445,2925,False
+780,extra_v10_vital_RR_std,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.03884378044819747,424,False
+781,extra_v10_vital_SBP_std,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.037531666125365376,4318,False
+782,extra_v10_vital_SPO2_std,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.038480025982461835,231,False
+783,extra_v10_vital_TEMP_std,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.03757063981812277,1872,False
+784,extra_v10_vital_DBP_min,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0013640792465086067,92,False
+785,extra_v10_vital_HR_min,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0015589477102955504,99,False
+786,extra_v10_vital_RR_min,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0012081844754790517,23,False
+787,extra_v10_vital_SBP_min,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.001390061708346866,129,False
+788,extra_v10_vital_SPO2_min,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0014550178629425137,15,False
+789,extra_v10_vital_TEMP_min,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0013770704774277362,67,False
+790,extra_v10_vital_DBP_max,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0013640792465086067,93,False
+791,extra_v10_vital_HR_max,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0015589477102955504,103,False
+792,extra_v10_vital_RR_max,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0012081844754790517,24,False
+793,extra_v10_vital_SBP_max,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.001390061708346866,132,False
+794,extra_v10_vital_SPO2_max,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0014550178629425137,14,False
+795,extra_v10_vital_TEMP_max,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0013770704774277362,73,False
+796,extra_v10_vital_DBP_first,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0013640792465086067,93,False
+797,extra_v10_vital_HR_first,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0015589477102955504,105,False
+798,extra_v10_vital_RR_first,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0012081844754790517,25,False
+799,extra_v10_vital_SBP_first,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.001390061708346866,136,False
+800,extra_v10_vital_SPO2_first,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0014550178629425137,15,False
+801,extra_v10_vital_TEMP_first,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0013770704774277362,76,False
+802,extra_v10_vital_DBP_last,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0013640792465086067,95,False
+803,extra_v10_vital_HR_last,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0015589477102955504,101,False
+804,extra_v10_vital_RR_last,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0012081844754790517,23,False
+805,extra_v10_vital_SBP_last,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.001390061708346866,133,False
+806,extra_v10_vital_SPO2_last,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0014550178629425137,15,False
+807,extra_v10_vital_TEMP_last,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0013770704774277362,68,False
+808,extra_v10_vital_DBP_change,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0013640792465086067,59,False
+809,extra_v10_vital_HR_change,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0015589477102955504,59,False
+810,extra_v10_vital_RR_change,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0012081844754790517,17,False
+811,extra_v10_vital_SBP_change,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.001390061708346866,80,False
+812,extra_v10_vital_SPO2_change,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0014550178629425137,11,False
+813,extra_v10_vital_TEMP_change,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0013770704774277362,65,False
+814,extra_v10_vital_DBP_last24mean,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.04986034426761936,437,False
+815,extra_v10_vital_HR_last24mean,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.04995128288405326,448,False
+816,extra_v10_vital_RR_last24mean,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.05056187073725235,123,False
+817,extra_v10_vital_SBP_last24mean,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0482104579408899,583,False
+818,extra_v10_vital_SPO2_last24mean,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.04853523871386814,89,False
+819,extra_v10_vital_TEMP_last24mean,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.04883403702500812,291,False
+820,extra_v10_vital_DBP_first24mean,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.05079571289379669,437,False
+821,extra_v10_vital_HR_first24mean,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.05165313413445924,459,False
+822,extra_v10_vital_RR_first24mean,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.05231568691133485,134,False
+823,extra_v10_vital_SBP_first24mean,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.05151023059434882,575,False
+824,extra_v10_vital_SPO2_first24mean,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.05212081844754791,88,False
+825,extra_v10_vital_TEMP_first24mean,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.05092562520298798,300,False
+826,extra_v10_cross_dx_per_day,diagnoses.csv + icd10_lookup.csv,"diagnosis count, code/category frequency or comorbidity indicator",0.0,74994,False
+827,extra_v10_cross_abnormal_fraction,multiple clinical tables,cross-table interaction or change/ratio,1.2991230919129587e-05,811,False
+828,extra_v10_cross_recent_visit_share,multiple clinical tables,cross-table interaction or change/ratio,0.005105553751217928,43,False
+829,extra_v10_cross_transfers_per_day,unit_transfers.csv,"unit transfer, ICU exposure or duration summary",0.0,72999,False
+830,extra_v10_cross_procedures_per_day,procedures.csv,procedure count or category summary,0.8276843130886652,13099,False
+831,extra_v10_cross_shock_index,vitals.csv + index_encounters.csv,"physiology-checked vital summary, latest value or clinical ratio",0.0950178629425138,15256,False
+832,extra_v10_cross_oxygen_resp_ratio,multiple clinical tables,cross-table interaction or change/ratio,0.09526469632997726,1838,False
+833,extra_v11_med_count,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,17,False
+834,extra_v11_med_ACE_ARB,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,4,False
+835,extra_v11_med_ANALGESIC,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,3,False
+836,extra_v11_med_ANTIBIOTIC,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,5,False
+837,extra_v11_med_ANTICOAGULANT,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,5,False
+838,extra_v11_med_ANTIDIABETIC_ORAL,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,4,False
+839,extra_v11_med_ANTIEMETIC,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,3,False
+840,extra_v11_med_ANTIPLATELET,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,4,False
+841,extra_v11_med_ANTIPSYCHOTIC,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,3,False
+842,extra_v11_med_BENZODIAZEPINE,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,3,False
+843,extra_v11_med_BETA_BLOCKER,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,3,False
+844,extra_v11_med_BRONCHODILATOR,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,3,False
+845,extra_v11_med_CCB,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,3,False
+846,extra_v11_med_CORTICOSTEROID,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,4,False
+847,extra_v11_med_ELECTROLYTE,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,3,False
+848,extra_v11_med_INSULIN,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,4,False
+849,extra_v11_med_LOOP_DIURETIC,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,4,False
+850,extra_v11_med_OPIOID,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,4,False
+851,extra_v11_med_PPI,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,3,False
+852,extra_v11_med_SSRI,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,3,False
+853,extra_v11_med_STATIN,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,3,False
+854,extra_v11_med_SUPPLEMENT,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,3,False
+855,extra_v11_med_THYROID,medications.csv,"medication count, drug class or continued-at-discharge indicator",0.019097109451120493,3,False
